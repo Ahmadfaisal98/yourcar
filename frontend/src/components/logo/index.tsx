@@ -13,7 +13,7 @@ const LogoContainer = styled.div`
   `};
 `;
 
-const LogoText = styled.div`
+const LogoText = styled.div<{ color?: ILogoProps['color'] }>`
   ${tw`
     text-xl
     md:text-2xl
@@ -21,8 +21,8 @@ const LogoText = styled.div`
     text-black
     m-1
     `};
-  ${({ color }: any) => (color === 'white' ? tw`text-white` : tw`text-black`)}
-` as any;
+  ${({ color }) => (color === 'white' ? tw`text-white` : tw`text-black`)}
+`;
 
 const Image = styled.div`
   ${tw`h-6 md:h-9 w-auto`};
