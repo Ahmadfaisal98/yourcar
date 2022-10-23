@@ -2,10 +2,12 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 
 import { BookCard } from '../components/bookCard';
+import { Footer } from '../components/footer';
 import { Marginer } from '../components/marginer';
 import Navbar from '../components/navbar';
 import { AboutUs } from '../containers/homepage/aboutUs';
 import { BookingSteps } from '../containers/homepage/bookingSteps';
+import { TopCars } from '../containers/homepage/topCars';
 import { TopSection } from '../containers/homepage/TopSection';
 
 const PageContainer = styled.div`
@@ -29,6 +31,9 @@ export default function HomePage() {
       <BookingSteps />
       <Marginer direction='vertical' margin='8em' />
       <AboutUs />
+      <Marginer direction='vertical' margin='8em' />
+      <TopCars />
+      <Footer />
     </PageContainer>
   );
 }
