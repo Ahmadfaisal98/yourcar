@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 import tw from 'twin.macro';
 
-import CarLogoImg from '../../assets/images/car-logo.png';
-import CarLogoDarkImg from '../../assets/images/car-logo-dark.png';
-
 interface ILogoProps {
   color?: 'white' | 'dark';
   bgColor?: 'white' | 'dark';
@@ -42,7 +39,11 @@ export function Logo(props: ILogoProps) {
     <LogoContainer>
       <Image>
         <img
-          src={bgColor === 'dark' ? CarLogoDarkImg : CarLogoImg}
+          src={
+            bgColor === 'dark'
+              ? 'assets/images/car-logo-dark.png'
+              : 'assets/images/car-logo.png'
+          }
           alt='logo'
         />
       </Image>
