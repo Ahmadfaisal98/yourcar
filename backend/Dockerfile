@@ -1,7 +1,4 @@
-FROM node:14 AS production
-
-ARG NODE_ENV=production
-ENV NODE_ENV=${NODE_ENV}
+FROM node:14 AS development
 
 WORKDIR /usr/src/api
 
@@ -9,7 +6,7 @@ COPY package.json .
 COPY package-lock.json .
 
 RUN npm install -g @nestjs/cli
-RUN npm install --production=true
+RUN npm install
 
 RUN apt-get -q update && apt-get -qy install netcat
 
