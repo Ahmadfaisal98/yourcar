@@ -14,6 +14,7 @@ import { ComponentsModule } from './components/components.module';
       // playground: true,
       debug: true,
       autoSchemaFile: true,
+      introspection: true,
     }),
     ComponentsModule,
   ],
