@@ -1,14 +1,13 @@
 module.exports = [
   {
     name: 'dev',
-    type: 'postgres',
-    host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
-    username: process.env.DB_USER,
-    password: process.env.DB_PASS,
-    database: process.env.DB_NAME,
+    type: 'mysql',
+    host: 'mysqldb',
+    port: 3306,
+    username: 'root',
+    password: 'pass123',
+    database: 'yourcar',
     entities: ['dist/**/entities/*{.ts,.js}'],
-    ssl: { rejectUnauthorized: false },
     synchronize: true,
     migrations: ['dist/migrations/*{.ts,.js}'],
     cli: {
