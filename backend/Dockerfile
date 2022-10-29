@@ -14,4 +14,4 @@ COPY . .
 
 RUN npm run build 
 
-CMD ["sh", "-c", "npx typeorm migration:run && npm run start:prod"]
+CMD ["sh", "-c", "npx typeorm migration:run && npm run start"]
