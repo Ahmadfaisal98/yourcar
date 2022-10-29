@@ -37,7 +37,8 @@ const CarThumbnail = styled.div`
 
   img {
     width: 100%;
-    height: 100%;
+    height: 172px;
+    object-fit: contain;
   }
 `;
 
@@ -137,7 +138,7 @@ const RentButton = styled(Button)`
 export function Car(props: ICarProps) {
   const {
     name,
-    thumbnailSrc,
+    thumbnailUrl,
     dailyPrice,
     monthlyPrice,
     mileage,
@@ -148,7 +149,7 @@ export function Car(props: ICarProps) {
   return (
     <CarContainer>
       <CarThumbnail>
-        <img src={thumbnailSrc} alt='thumbnail' />
+        <img src={thumbnailUrl} alt='thumbnail' />
       </CarThumbnail>
       <CarName>{name}</CarName>
       <PricesContainer>

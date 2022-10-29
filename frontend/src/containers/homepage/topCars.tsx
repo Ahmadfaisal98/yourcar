@@ -107,9 +107,7 @@ export function TopCars() {
   const isEmptyTopCars = !topCars || topCars.length === 0;
 
   const cars =
-    (!isEmptyTopCars &&
-      topCars.map((car) => <Car {...car} thumbnailSrc={car.thumbnailUrl} />)) ||
-    [];
+    (!isEmptyTopCars && topCars.map((car) => <Car {...car} />)) || [];
 
   const numberOfDots = isMobile ? cars.length : Math.ceil(cars.length / 3);
 
